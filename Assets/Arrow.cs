@@ -1,4 +1,4 @@
-using System.Collections;
+锘縰sing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +13,7 @@ public class Arrow : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            // 局肺快甫 惯荤., 积己窍绰 内靛
+            // 鞎犽鞖半ゼ 氚滌偓., 靸濎劚頃橂姅 旖旊摐
             Instantiate(arrow, arrowSpawnPosition.position, arrowSpawnPosition.rotation);
         }
     }

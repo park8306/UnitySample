@@ -183,6 +183,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrow: {fileID: 1924330952}
   arrowSpawnPosition: {fileID: 1607804188}
+  animator: {fileID: 1666402548}
+  interval: 0.35
+  FireDelay: 0.35
 --- !u!1 &381394532
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,6 +406,11 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.64
   m_Center: {x: 0, y: 0.24, z: 0}
+--- !u!95 &854513445 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95237074988894122, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
+  m_PrefabInstance: {fileID: 1057111042}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &854513446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,6 +423,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a2ab7dd7b4e6949a1c7d24b1e8e54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 854513445}
+  dieAnimationTime: 1
+  speed: 3
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4906828391645816, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.114176
+      value: 9.74
       objectReference: {fileID: 0}
     - target: {fileID: 4906828391645816, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
       propertyPath: m_LocalRotation.w
@@ -820,8 +831,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383199961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 2.58}
+  m_LocalPosition: {x: 0, y: -0, z: 3.8138}
+  m_LocalScale: {x: 1, y: 1, z: 1.7435526}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -875,7 +886,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666402545}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: d9a1483b77bf10e4e851678ab6c2e54e, type: 3}
   m_Controller: {fileID: 9100000, guid: d6deb37cb076b6b40a3a16851450c968, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -908,13 +919,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9ef625d01f79b4e4eb62fcdf032954ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ef625d01f79b4e4eb62fcdf032954ca, type: 3}
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ef625d01f79b4e4eb62fcdf032954ca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.7565542
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ef625d01f79b4e4eb62fcdf032954ca, type: 3}
       propertyPath: m_LocalPosition.y
@@ -922,7 +937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ef625d01f79b4e4eb62fcdf032954ca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.043606758
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9ef625d01f79b4e4eb62fcdf032954ca, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1003,8 +1018,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6652099
-  m_Center: {x: -0.000000044703484, y: -0.49534142, z: 0.00000005960469}
+  m_Radius: 0.09
+  m_Center: {x: -0.000000044703484, y: -1.04, z: 0.00000005960469}
 --- !u!1001 &2118440170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1022,7 +1037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8422892626600249584, guid: 214e08cd5e5d74c458e2a81b7ec2c84c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.35
       objectReference: {fileID: 0}
     - target: {fileID: 8422892626600249584, guid: 214e08cd5e5d74c458e2a81b7ec2c84c, type: 3}
       propertyPath: m_LocalPosition.y

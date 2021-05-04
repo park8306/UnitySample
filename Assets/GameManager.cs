@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     static public GameManager instance;
-    public int score;
+    public int score = 1000;
     public TextMeshProUGUI scoreText;
 
     private void Awake()

@@ -11,7 +11,7 @@ public class Monster : MonoBehaviour
         Debug.Log(other);
 
         //animator.Play("GetHit", 0, 0);
-        //Destroy(other.gameObject);
+        Destroy(other.gameObject);
         //animator.Play("GetHit");
         StartCoroutine(DieAndDestroy());
         

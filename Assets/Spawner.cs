@@ -8,16 +8,24 @@ public class Spawner : MonoBehaviour
     public List<Transform> points;
     public GameObject EnemyGo;
     public float delaySpawn = 3.0f;
+
+    public bool isPlaying = true;
+    public float spawnDelay = 1f;
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
         //int selectedIndex = Random.Range(0, points.Count);
         //Debug.Log(points[selectedIndex].position);
 
         // 게임이 끝날 때 까지 반복
-        while(true)
+        while(isPlaying)
         {
+            int selectedIndex = Random.Range(0, points.Count);
 
+            var selectedTranform = points[selectedIndex];
+            Instantiate(EnemyGo, selectedTranform.position, EnemyGo.transform.rotation);
+
+            yield return new WaitForSeconds(spawnDelay);
         }
 
 

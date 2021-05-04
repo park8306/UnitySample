@@ -28,11 +28,7 @@ public class Arrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            // 애로우를 발사., 생성하는 코드
-            StartCoroutine(OnFireArrow());
-        }
+        
     }
 
     private IEnumerator OnFireArrow()
